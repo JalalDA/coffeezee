@@ -1,0 +1,121 @@
+body {
+    font-family: "Rubik", sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+}
+
+.gambar {
+    width: 50%;
+}
+.form {
+    width: 50%;
+    /* background-color: blue; */
+}
+
+.signin_image {
+    width: 100%;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.button-signup {
+    background: #FFBA33;
+    padding: 12px 32px 12px 32px;
+    border-radius: 12px;
+    outline: none;
+    border : 1px solid #FFBA33;
+    color: #6A4029;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 70%;
+    gap: 10px;
+}
+
+.input-signin {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #6A4029;
+    border-radius: 12px;
+}
+
+.forgot {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 70%;
+    padding-left: 12px;
+    font-weight: 700;
+    color: #6A4029;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.btn-login {
+    background-color: #FFBA33;
+    color: #6A4029;
+    width: 70%;
+    padding : 20px;
+    margin-left: 40px;
+    border-radius: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-google {
+    background-color: white;
+    color: #000;
+    width: 70%;
+    padding : 20px;
+    margin-left: 40px;
+    border-radius: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* box-shadow: 1px inset #6A4029; */
+    border : 1px solid #6A4029;
+    gap : 12px;
+}
+
+
+@media (max-width : 425px) {
+    .gambar {
+        display: none;
+    }
+
+    .form {
+        width: 100%;
+        /* background-color: blue; */
+    }
+}
