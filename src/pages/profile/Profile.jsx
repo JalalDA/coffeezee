@@ -7,7 +7,7 @@ const Profile = () => {
     const [profile, setProfile] = useState({})
     const getProfile = async () => {
         try {
-            const response = await axios.get(`http://localhost:5000/user/profile`, {
+            const response = await axios.get(`${process.env.REACT_APP_HOST}/user/profile`, {
                 headers : {
                     Authorization : `Bearer ${token}`
                 }
