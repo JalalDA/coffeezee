@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import NavItem from './NavItem.jsx';
 
 const Navbar = () => {
     const navigation = useNavigate()
@@ -12,14 +13,38 @@ const Navbar = () => {
             setIsLogin(true)
         }
     }, [])
+
+    const dataNav = [
+        {
+            name : "Home",
+            route : "/"
+        },
+        {
+            name : "Product",
+            route : "/product"
+        },
+        {
+            name : "Cart",
+            route : "/cart"
+        },
+        {
+            name : "History",
+            route : "/history"
+        },
+    ]
+
     return (
         <div className='w-full flex items-center justify-between p-8'>
             <div className="logo font-bold text-lg">Coffeezee</div>
             <div className="navigasi flex items-center justify-center gap-x-8 list-none">
-                <li>Home</li>
-                <li>Product</li>
-                <li>Your Cart</li>
-                <li>History</li>
+                {
+                    dataNav.map((item, index)=>{
+                        return (
+                            <NavItem key={index} to={item.route} item={item.route} name={item.name}/>
+                        )
+                        
+                    })
+                }
             </div>
             {
                 isLogin ?
